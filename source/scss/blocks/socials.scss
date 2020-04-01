@@ -1,0 +1,41 @@
+.socials__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 450px;
+}
+
+.socials__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $bg-main;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .socials__link {
+    width: 55px;
+    height: 55px;
+  }
+
+  .socials__icon {
+    width: 28px;
+    height: 28px;
+  }
+}

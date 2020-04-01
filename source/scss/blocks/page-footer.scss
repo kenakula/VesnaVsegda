@@ -1,0 +1,37 @@
+.page-footer__wrapper {
+  border-top: 1px solid rgba($color: $white, $alpha: 0.2);
+}
+
+.page-footer__nav {
+  padding: 25px 0;
+}
+
+.page-footer__nav-list {
+  @include list-reset;
+}
+
+.page-footer__nav-item {
+  padding: 5px 30px;
+  text-align: center;
+}
+
+.page-footer__nav-link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white-faded;
+  text-decoration: none;
+}
+
+.page-footer__socials {
+  padding: 10px 0;
+
+  .socials__list {
+    padding: 0 10px;
+  }
+
+  .socials__icon {
+    width: 25px;
+    height: 25px;
+  }
+}

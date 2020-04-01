@@ -1,0 +1,14 @@
+.thumbnails__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnails__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

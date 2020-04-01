@@ -1,0 +1,33 @@
+.catalog {
+  padding: 90px 0;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .catalog__title {
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 43px);
+      width: 86px;
+      height: 2px;
+      background-color: $white;
+    }
+  }
+}

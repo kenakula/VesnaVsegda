@@ -1,0 +1,27 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__inner {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  min-height: 65px;
+}
+
+.page-header__logo {
+  position: relative;
+  left: 0;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .page-header__inner {
+    min-height: 75px;
+  }
+
+  .page-header__logo img {
+    width: 137px;
+    height: 47px;
+  }
+}

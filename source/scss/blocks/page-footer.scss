@@ -40,6 +40,11 @@
   .page-footer__nav-link {
     font-size: 20px;
     line-height: 22px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 

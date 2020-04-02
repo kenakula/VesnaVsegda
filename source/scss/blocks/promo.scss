@@ -129,13 +129,17 @@
 
   .promo__arrow {
     position: relative;
-    margin: -40px 60px 0 0;
+    display: block;
     align-self: flex-end;
+    margin: -40px 60px 0 0;
+    color: $white;
   }
 
   .promo__arrow-label {
     position: absolute;
+    display: block;
     top: -100px;
+    left: -73px;
     width: 180px;
     display: block;
     font-size: 20px;
@@ -148,5 +152,8 @@
     display: block;
     margin: 0 auto;
     margin-top: -120px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 }

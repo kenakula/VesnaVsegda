@@ -1,10 +1,19 @@
 .promo {
   padding-top: 103px;
+  min-height: 466px;
   height: calc(100vh - 65px);
   background-image: url("../img/header-bg-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../../img/header-bg-mobile@2x.png");
+  }
+
+  @media (min-resolution: $retina-plus) {
+    background-image: url("../../img/header-bg-mobile@3x.png");
+  }
 }
 
 .promo__title {
@@ -36,15 +45,29 @@
   font-size: 0;
 }
 
-@media (min-width: 768px) {
+.promo__mouse {
+  display: none;
+}
+
+@media (min-width: $tablet) {
   .promo {
     margin-top: -75px;
     padding-top: 20%;
+    min-height: 880px;
     height: 100vh;
     background-image: url("../img/header-bg-tablet@1x.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../../img/header-bg-tablet@2x.png");
+    }
+
+    @media (min-resolution: $retina-plus) {
+      background-image: url("../../img/header-bg-tablet@3x.png");
+    }
   }
 
   .promo__title {
+    margin-bottom: 20%;
     font-size: 70px;
     line-height: 77px;
   }
@@ -56,7 +79,7 @@
   }
 
   .promo__socials {
-    margin-bottom: 25px;
+    margin-bottom: 10%;
   }
 
   .promo__arrow {
@@ -64,5 +87,66 @@
       height: 40px;
       width: 30px;
     }
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo {
+    margin-top: -160px;
+    padding-top: 12%;
+    background-image: url("../img/header-bg-desktop@1x.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/header-bg-desktop@2x.png");
+    }
+
+    @media (min-resolution: $retina-plus) {
+      background-image: url("../img/header-bg-desktop@3x.png");
+    }
+  }
+
+  .promo__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo__title {
+    margin-bottom: 5%;
+    padding: 0 15%;
+    font-size: 120px;
+    line-height: 132px;
+  }
+
+  .promo__link {
+    font-size: 12px;
+    line-height: 13px;
+  }
+
+  .promo__socials {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .promo__arrow {
+    position: relative;
+    margin: -40px 60px 0 0;
+    align-self: flex-end;
+  }
+
+  .promo__arrow-label {
+    position: absolute;
+    top: -100px;
+    width: 180px;
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    transform: rotate(90deg);
+  }
+
+  .promo__mouse {
+    display: block;
+    margin: 0 auto;
+    margin-top: -120px;
   }
 }

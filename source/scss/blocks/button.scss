@@ -12,11 +12,24 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .button {
     font-size: 15px;
     line-height: 17px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .button {
+    font-size: 11px;
+    line-height: 12px;
   }
 }

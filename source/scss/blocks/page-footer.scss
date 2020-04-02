@@ -35,3 +35,17 @@
     height: 25px;
   }
 }
+
+@media (min-width: $tablet) {
+  .page-footer__nav-link {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-footer__nav-list {
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -26,9 +26,10 @@
       </a>
     </div>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggler" type="button">Скрыть меню
-        <span></span>
-        <span></span>
+      <button class="main-nav__toggler" type="button">
+        <span class="main-nav__toggler-label">Меню</span>
+        <span class="main-nav__toggler--top"></span>
+        <span class="main-nav__toggler--bot"></span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -56,7 +57,7 @@
       <div class="promo__inner">
         <h1 class="promo__title">Флористика с душой</h1>
         <a class="promo__link button" href="#">Смотреть работы</a>
-        <div class="promo__socials socials">
+        <div class="promo__socials socials socials--header">
           <ul class="socials__list">
             <li class="socials__item" data-slide="1">
               <a class="socials__link socials__link--insta" href="#">
@@ -88,14 +89,20 @@
             </li>
           </ul>
         </div>
-        <button class="button promo__arrow" type="button">Прокрутить вниз
+        <a class="button promo__arrow" href="#catalog">
+          <span class="promo__arrow-label">Прокрутить вниз</span>
           <svg class="promo__arrow-icon" width="14" height="21">
             <use xlink:href="#icon-arrow-down"></use>
           </svg>
-        </button>
+        </a>
       </div>
+      <button class="button promo__mouse" type="button">
+        <svg class="promo__mouse--icon" width="37" height="56">
+          <use xlink:href="#icon-mouse"></use>
+        </svg>
+      </button>
     </section>
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="catalog__wrapper wrapper">
         <h2 class="catalog__title">Каталог услуг</h2>
 
@@ -104,27 +111,31 @@
             <ul class="slider__list">
               <li class="slider__item">
                 <picture>
-                  <img class="slider__image" src="img/slider-img-1-mobile@1x.jpg" width="290" height="395" alt="букет невесты">
+                  <img class="slider__image" src="img/slider-img-1-mobile@1x.jpg" srcset="slider-img-1-mobile@2x.jpg 2x, slider-img-1-mobile@3x.jpg 3x" width="290" height="395" alt="букет невесты">
                 </picture>
                 <p class="slider__caption">Букет невесты и свадебное оформление</p>
+                <button class="slider__button button" type="button">Смотреть работы</button>
               </li>
               <li class="slider__item">
                 <picture>
-                  <img class="slider__image" src="img/slider-img-2-mobile@1x.jpg" width="290" height="395" alt="букет невесты">
+                  <img class="slider__image" src="img/slider-img-2-mobile@1x.jpg" srcset="slider-img-2-mobile@2x.jpg 2x, slider-img-2-mobile@3x.jpg 3x" width="290" height="395" alt="букет невесты">
                 </picture>
                 <p class="slider__caption">Букеты на торжества</p>
+                <button class="slider__button button" type="button">Смотреть работы</button>
               </li>
               <li class="slider__item">
                 <picture>
-                  <img class="slider__image" src="img/slider-img-3-mobile@1x.jpg" width="290" height="395" alt="букет невесты">
+                  <img class="slider__image" src="img/slider-img-3-mobile@1x.jpg" srcset="slider-img-3-mobile@2x.jpg 2x, slider-img-3-mobile@3x.jpg 3x" width="290" height="395" alt="букет невесты">
                 </picture>
                 <p class="slider__caption">Композиции</p>
+                <button class="slider__button button" type="button">Смотреть работы</button>
               </li>
               <li class="slider__item">
                 <picture>
                   <img class="slider__image" src="img/slider-img-4-mobile@1x.jpg" width="290" height="395" alt="букет невесты">
                 </picture>
                 <p class="slider__caption">Оформление мероприятий</p>
+                <button class="slider__button button" type="button">Смотреть работы</button>
               </li>
             </ul>
           </div>
@@ -143,7 +154,9 @@
       <div class="discount__wrapper wrapper">
         <div class="discount__img-container">
           <picture>
-            <img class="discount__img" src="img/discount-img-mobile@1x.jpg" width="288" height="170" alt="фотография сервированного и украшенного стола">
+            <source media="(min-width: 1366px)" srcset="img/discount-img-desktop@1x.jpg 1x, img/discount-img-desktop@2x.jpg 2x, img/discount-img-desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/discount-img-tablet@1x.jpg 1x, img/discount-img-tablet@2x.jpg 2x, img/discount-img-tablet@3x.jpg 3x">
+            <img class="discount__img" src="img/discount-img-mobile@1x.jpg" srcset="img/discount-img-mobile@2x.jpg 2x, img/discount-img-mobile@3x.jpg 3x" width="288" height="170" alt="фотография сервированного и украшенного стола">
           </picture>
         </div>
         <div class="discount__inner">
@@ -221,19 +234,24 @@
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
-      <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
-
-      <form class="modal__form form" action="#" method="POST">
-       <fieldset class="form__field">
-        <input class="form__input" type="text" name="name" placeholder="Имя">
-        <input class="form__input" type="text" name="surname" placeholder="Фамилия">
-       </fieldset>
-       <button class="form__button button" type="submit">Позвоните мне</button>
-      </form>
+      <div class="modal__wrapper modal__wrapper--img">
+        <img class="modal__img" src="img/callback-img-desktop@1x.jpg" srcset="img/callback-img-desktop@2x.jpg 2x, img/callback-img-desktop@3x.jpg 3x" width="335" height="444" alt="изображение цветочка">
+      </div>
+      <div class="modal__wraper modal__wrapper--form">
+        <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
+        <form class="modal__form form" action="#" method="POST">
+          <fieldset class="form__field">
+           <input class="form__input" type="text" name="name" placeholder="Имя">
+           <input class="form__input" type="text" name="surname" placeholder="Фамилия">
+          </fieldset>
+          <button class="form__button button" type="submit">Позвоните мне</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="js/menu.min.js"></script>
   <script src="js/slider.min.js"></script>
   <script src="js/modal.min.js"></script>
+  <script src="js/slide-to-anchor.min.js"></script>
 </body>
 </html>

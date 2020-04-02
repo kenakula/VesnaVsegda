@@ -32,7 +32,7 @@
     position: absolute;
     bottom: -19px;
     left: 0;
-    width: 85px;
+    width: 86px;
     height: 2px;
     background-color: $white;
   }
@@ -53,4 +53,79 @@
 .discount__link {
   width: 220px;
   background-color: $black;
+}
+
+@media (min-width: $tablet) {
+  .discount__inner {
+    padding-top: 30px;
+  }
+
+  .discount__img {
+    width: 453px;
+    height: 323px;
+  }
+
+  .discount__title {
+    padding: 0 70px;
+    text-align: center;
+
+    &::after {
+      left: calc(50% - 43px)
+    }
+  }
+
+  .discount__list {
+    margin: 0 auto 30px;
+    width: 70%;
+    text-align: center;
+  }
+
+  .discount__link {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop) {
+  .discount__wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .discount__inner {
+    padding-top: 60px;
+    padding-left: 10%;
+    order: -1;
+  }
+
+  .discount__img-container {
+    flex-shrink: 0;
+  }
+
+  .discount__img {
+    width: 697px;
+    height: 410px;
+  }
+
+  .discount__title {
+    padding: 0;
+    max-width: 300px;
+    font-size: 30px;
+    line-height: 51px;
+    text-align: left;
+
+    &::after {
+      left: 0;
+    }
+  }
+
+  .discount__list {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: left;
+  }
+
+  .discount__link {
+    margin: 0;
+  }
 }

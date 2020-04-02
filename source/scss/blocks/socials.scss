@@ -28,7 +28,7 @@
   color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .socials__link {
     width: 55px;
     height: 55px;
@@ -37,5 +37,19 @@
   .socials__icon {
     width: 28px;
     height: 28px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .socials--header {
+    .socials__list {
+      flex-direction: column;
+      padding: 0;
+      max-width: none;
+    }
+  }
+
+  .socials__link {
+    background-color: transparent;
   }
 }

@@ -3,51 +3,52 @@
 
   position: absolute;
   right: 10%;
-  top: 28px;
+  top: 27px;
+  display: flex;
+  justify-content: center;
   width: 37px;
   height: 11px;
-  font-size: 0;
+  cursor: pointer;
 
-  span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $white;
-    transition: all 0.3s ease-in;
-
-    &:last-child {
-      top: 8px;
-    }
+  .rotated {
+    transform: rotate(45deg);
   }
+}
 
-  &--active {
-    right: 25px;
+.main-nav__toggler--top,
+.main-nav__toggler--bot {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
 
-    span {
-      top: 4px;
-      width: 29px;
-      transform: rotate(45deg);
-      background-color: $white-faded;
+.main-nav__toggler--bot {
+  top: 10px;
 
-      &:last-child {
-        top: 4px;
-        transform: rotate(-45deg);
-      }
-    }
+  &.rotated {
+    transform: rotate(-45deg);
   }
+}
+
+.main-nav__toggler-label {
+  display: none;
 }
 
 .main-nav__list {
   @include list-reset;
 
   padding: 30px 0 50px;
+  height: calc(100vh - 65px);
   text-align: center;
 }
 
 .main-nav__item {
-  margin-bottom: 30px;
+  margin-bottom: 10%;
   padding: 5px 45px;
 
   &:last-child {
@@ -71,8 +72,65 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .main-nav__toggler {
     top: 32px;
+  }
+
+  .main-nav__list {
+    padding-top: 100px;
+    height: 100vh;
+  }
+
+  .main-nav__item {
+    margin-bottom: 5%;
+    padding: 0 165px;
+  }
+
+  .main-nav__link {
+    font-size: 30px;
+    line-height: 33px;
+
+    &--active {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .main-nav__toggler {
+    top: 74.5px;
+    right: 10%;
+  }
+
+  .main-nav__toggler-label {
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  .main-nav__list {
+    padding-top: 20px;
+  }
+  
+  .main-nav__item {
+    padding: 0 30%;
+  }
+
+  .main-nav__link {
+    font-size: 35px;
+    line-height: 39px;
+
+    &--active {
+      font-size: 45px;
+      line-height: 50px;
+    }
   }
 }

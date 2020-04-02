@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  ESC_KEY = "Escape";
+  const ESC_KEY = "Escape";
 
   const modal = $(".modal");
   const orderButton = $(".order-button");

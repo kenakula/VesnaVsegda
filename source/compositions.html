@@ -26,9 +26,10 @@
       </a>
     </div>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggler" type="button">Скрыть меню
-        <span></span>
-        <span></span>
+      <button class="main-nav__toggler" type="button">
+        <span class="main-nav__toggler-label">Меню</span>
+        <span class="main-nav__toggler--top"></span>
+        <span class="main-nav__toggler--bot"></span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -55,7 +56,10 @@
     <section class="offer">
       <div class="offer__picture-container">
         <picture>
-          <img class="offer__img" src="img/box-img-mobile@1x.jpg" alt="фотография композиции в корзинке">
+          <source media="(min-width: 1366px)" srcset="img/box-img-desktop@1x.jpg 1x, img/box-img-desktop@2x.jpg 2x, img/box-img-desktop@3x.jpg 3x">
+          <!-- В макете не было изображений для планшетной версии ¯\_(ツ)_/¯ -->
+          <source media="(min-width: 768px)" srcset="img/event-img-tablet@1x.jpg 1x, img/event-img-tablet@2x.jpg 2x, img/event-img-tablet@3x.jpg 3x">
+          <img class="offer__img" src="img/box-img-mobile@1x.jpg" srcset="img/box-img-mobile@2x.jpg 2x" alt="фотография композиции в корзинке">
         </picture>
       </div>
       <div class="offer__inner wrapper">
@@ -66,23 +70,46 @@
         </p>
         <button class="offer__button button order-button" type="button">Заказать</button>
         <div class="offer__thumbnails thumbnails">
-          <ul class="thumbnails__list">
-            <li class="thumbnails__item">
-              <picture>
-                <img class="thumbnails__img" src="img/box-thumb-1-mobile@1x.jpg" alt="превью картинки предложения">
-              </picture>
-            </li>
-            <li class="thumbnails__item">
-              <picture>
-                <img class="thumbnails__img" src="img/box-thumb-2-mobile@1x.jpg" alt="превью картинки предложения">
-              </picture>
-            </li>
-            <li class="thumbnails__item">
-              <picture>
-                <img class="thumbnails__img" src="img/box-thumb-3-mobile@1x.jpg" alt="превью картинки предложения">
-              </picture>
-            </li>
-          </ul>
+          <div class="thumbnails__inner">
+            <ul class="thumbnails__list">
+              <li class="thumbnails__item">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/event-thumb-1-tablet@1x.jpg 1x, img/event-thumb-1-tablet@2x.jpg 2x">
+                  <img class="thumbnails__img" src="img/box-thumb-1-mobile@1x.jpg" srcset="img/box-thumb-1-mobile@2x.jpg 2x" alt="превью картинки предложения">
+                </picture>
+              </li>
+              <li class="thumbnails__item">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/event-thumb-2-tablet@1x.jpg 1x, img/event-thumb-2-tablet@2x.jpg 2x">
+                  <img class="thumbnails__img" src="img/box-thumb-2-mobile@1x.jpg" srcset="img/box-thumb-2-mobile@2x.jpg 2x" alt="превью картинки предложения">
+                </picture>
+              </li>
+              <li class="thumbnails__item">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/event-thumb-3-tablet@1x.jpg 1x, img/event-thumb-3-tablet@2x.jpg 2x">
+                  <img class="thumbnails__img" src="img/box-thumb-3-mobile@1x.jpg" srcset="img/box-thumb-3-mobile@2x.jpg 2x" alt="превью картинки предложения">
+                </picture>
+              </li>
+              <li class="thumbnails__item thumbnails__item--mobilehidden">
+                <picture>
+                  <img class="thumbnails__img" src="img/event-thumb-4-tablet@1x.jpg" srcset="img/event-thumb-4-tablet@2x.jpg 2x" alt="превью картинки предложения">
+                </picture>
+              </li>
+              <li class="thumbnails__item thumbnails__item--desktop">
+                <img class="thumbnails__img" src="img/box-thumb-5-desktop@1x.jpg" srcset="img/box-thumb-5-desktop@2x.jpg 2x" width="123" height="123" alt="превью картинки предложения">
+              </li>
+              <li class="thumbnails__item thumbnails__item--desktop">
+                <img class="thumbnails__img" src="img/box-thumb-6-desktop@1x.jpg" srcset="img/box-thumb-5-desktop@2x.jpg 2x" width="123" height="123" alt="превью картинки предложения">
+              </li>
+              <li class="thumbnails__item thumbnails__item--desktop">
+                <img class="thumbnails__img" src="img/box-thumb-7-desktop@1x.jpg" srcset="img/box-thumb-5-desktop@2x.jpg 2x" width="123" height="123" alt="превью картинки предложения">
+              </li>
+              <li class="thumbnails__item thumbnails__item--desktop">
+                <img class="thumbnails__img" src="img/box-thumb-8-desktop@1x.jpg" srcset="img/box-thumb-5-desktop@2x.jpg 2x" width="123" height="123" alt="превью картинки предложения">
+              </li>
+            </ul>
+          </div>
+          <button class="button thumbnails__button" type="button"></button>
         </div>
       </div>
     </section>
@@ -150,18 +177,24 @@
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
-      <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
-
-      <form class="modal__form form" action="#" method="POST">
-       <fieldset class="form__field">
-        <input class="form__input" type="text" name="name" placeholder="Имя">
-        <input class="form__input" type="text" name="surname" placeholder="Фамилия">
-       </fieldset>
-       <button class="form__button button" type="submit">Позвоните мне</button>
-      </form>
+      <div class="modal__wrapper modal__wrapper--img">
+        <img class="modal__img" src="img/callback-img-desktop@1x.jpg" srcset="img/callback-img-desktop@2x.jpg 2x, img/callback-img-desktop@3x.jpg 3x" width="335" height="444" alt="изображение цветочка">
+      </div>
+      <div class="modal__wraper modal__wrapper--form">
+        <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
+        <form class="modal__form form" action="#" method="POST">
+          <fieldset class="form__field">
+           <input class="form__input" type="text" name="name" placeholder="Имя">
+           <input class="form__input" type="text" name="surname" placeholder="Фамилия">
+          </fieldset>
+          <button class="form__button button" type="submit">Позвоните мне</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="js/menu.min.js"></script>
   <script src="js/modal.min.js"></script>
+  <script src="js/thumbnails.min.js"></script>
+
 </body>
 </html>

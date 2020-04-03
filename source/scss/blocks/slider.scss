@@ -70,15 +70,25 @@
 }
 
 .slider__bullet {
+  position: relative;
   display: block;
   width: 20%;
   height: 3px;
   border-radius: 5px;
   background-color: rgba($color: $white, $alpha: 0.3);
   transition: background-color 0.3s;
+  cursor: pointer;
 
   &--active {
     background-color: $white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    height: 13px;
   }
 }
 

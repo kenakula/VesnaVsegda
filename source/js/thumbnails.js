@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   const sliderButton = $(".thumbnails__button");
   const sliderList = $(".thumbnails__list");
 

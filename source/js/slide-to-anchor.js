@@ -5,25 +5,25 @@ $(document).ready(() => {
   const catalogAnchor = $("#catalog");
 
   
-  const slideToAnchor = (evt, anchor) => {
+  const slideToAnchor = function (evt, anchor) {
     let anchorPosition = anchor.offset().top;
+    evt.preventDefault();
 
     $("html, body").animate({
       scrollTop: anchorPosition,
     }, 1000);
 
-    evt.preventDefault();
   };
 
-  slideButton.click((evt) => {
+  slideButton.click(function (evt) {
     slideToAnchor(evt, catalogAnchor);
   });
   
-  mouseButton.click((evt) => {
+  mouseButton.click(function (evt) {
     slideToAnchor(evt, catalogAnchor);
   });
 
-  promoButton.click((evt) => {
+  promoButton.click(function (evt) {
     slideToAnchor(evt, catalogAnchor);
   });
 

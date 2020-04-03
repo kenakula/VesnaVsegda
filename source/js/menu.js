@@ -19,24 +19,24 @@ $(document).ready(function () {
   const togglerTop = $(".main-nav__toggler--top");
   const togglerBot = $(".main-nav__toggler--bot");
 
-  const toggleRotatedClass = (elem1, elem2) => {
-    window.setTimeout(() => {
+  const toggleRotatedClass = function (elem1, elem2) {
+    window.setTimeout(function () {
       elem1.toggleClass("rotated");
       elem2.toggleClass("rotated");
     }, 300)
   };
 
-  const animateTogglerToCenter = (elem1, elem2) => {
+  const animateTogglerToCenter = function (elem1, elem2) {
     elem1.animate(CENTER_POSITION, 400);
     elem2.animate(CENTER_POSITION, 400);
   };
 
-  const animateTogglerToInitial = (elem1, elem2) => {
+  const animateTogglerToInitial = function (elem1, elem2) {
     elem1.animate(TOP_POSITION, 400);
     elem2.animate(BOT_POSITION, 400);
   };
 
-  const showMenu = () => {
+  const showMenu = function () {
     menu.slideDown("slow");
     menu.addClass("main-nav__list--active");
     menuToggler.addClass("main-nav__toggler--active");
@@ -44,7 +44,7 @@ $(document).ready(function () {
     toggleRotatedClass(togglerTop, togglerBot);
   };
 
-  const hideMenu = () => {
+  const hideMenu = function () {
     menu.slideUp("slow");
     menu.removeClass("main-nav__list--active");
     menuToggler.removeClass("main-nav__toggler--active");
@@ -52,7 +52,7 @@ $(document).ready(function () {
     toggleRotatedClass(togglerTop, togglerBot);
   };
 
-  const onTogglerClickToggleMenu = () => {
+  const onTogglerClickToggleMenu = function () {
     if (!menu.hasClass("main-nav__list--active")) {
       showMenu();
     } else {

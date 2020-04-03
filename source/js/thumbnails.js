@@ -14,15 +14,15 @@ $(document).ready(function () {
     }, "slow");
   };
 
-  const changeButtonClass = () => {
+  const changeButtonClass = function () {
     sliderButton.toggleClass("thumbnails__button--used");
   };
 
-  const changeListClass = () => {
+  const changeListClass = function () {
     sliderList.toggleClass("thumbnails__list--slided");
   };
 
-  const onSliderButtonSlidesChange = () => {
+  const onSliderButtonSlidesChange = function () {
 
     if (sliderList.hasClass("thumbnails__list--slided")) {
       moveSliderBack();

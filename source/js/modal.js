@@ -5,19 +5,20 @@ $(document).ready(function () {
   const orderButton = $(".order-button");
   const closeButton = $(".modal__close");
 
-  const showModal = (event) => {
+  const showModal = function (event) {
     event.preventDefault();
     modal.fadeIn("slow");
     $(document).on("keydown", onEscCloseModal);
   };
 
-  const closeModal = () => {
+  const closeModal = function () {
     event.preventDefault();
     modal.fadeOut("slow");
   };
 
-  const onEscCloseModal = (event) => {
+  const onEscCloseModal = function (event) {
     if (event.key === ESC_KEY) {
+      console.log('hello')
       closeModal();
       $(document).off("keydown", onEscCloseModal);
     }

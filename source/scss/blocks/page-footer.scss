@@ -21,6 +21,12 @@
   line-height: 18px;
   color: $white-faded;
   text-decoration: none;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
 }
 
 .page-footer__socials {

@@ -9,9 +9,19 @@
   width: 37px;
   height: 11px;
   cursor: pointer;
+  outline: none;
 
   .rotated {
     transform: rotate(45deg);
+  }
+
+  &:focus::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid $white;
   }
 }
 
@@ -64,10 +74,16 @@
   color: $white-faded;
   text-decoration: none;
   text-transform: uppercase;
+  outline: none;
 
   &--active {
     font-size: 25px;
     line-height: 28px;
+    color: $white;
+  }
+
+  &:focus,
+  &:hover {
     color: $white;
   }
 }

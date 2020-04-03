@@ -8,11 +8,11 @@
   background-size: cover;
 
   @media (min-resolution: $retina) {
-    background-image: url("../../img/header-bg-mobile@2x.png");
+    background-image: url("../img/header-bg-mobile@2x.png");
   }
 
   @media (min-resolution: $retina-plus) {
-    background-image: url("../../img/header-bg-mobile@3x.png");
+    background-image: url("../img/header-bg-mobile@3x.png");
   }
 }
 
@@ -40,9 +40,12 @@
 }
 
 .promo__arrow {
+  position: relative;
+  display: block;
   margin: 0 auto;
   width: 30px;
   font-size: 0;
+  text-align: center;
 }
 
 .promo__mouse {
@@ -58,16 +61,16 @@
     background-image: url("../img/header-bg-tablet@1x.png");
 
     @media (min-resolution: $retina) {
-      background-image: url("../../img/header-bg-tablet@2x.png");
+      background-image: url("../img/header-bg-tablet@2x.png");
     }
 
     @media (min-resolution: $retina-plus) {
-      background-image: url("../../img/header-bg-tablet@3x.png");
+      background-image: url("../img/header-bg-tablet@3x.png");
     }
   }
 
   .promo__title {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     font-size: 70px;
     line-height: 77px;
   }
@@ -111,13 +114,14 @@
   }
 
   .promo__title {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     padding: 0 15%;
     font-size: 120px;
     line-height: 132px;
   }
 
   .promo__link {
+    margin-bottom: 30px;
     font-size: 12px;
     line-height: 13px;
   }
@@ -128,10 +132,8 @@
   }
 
   .promo__arrow {
-    position: relative;
-    display: block;
     align-self: flex-end;
-    margin: -40px 60px 0 0;
+    margin: -55px 60px 0 0;
     color: $white;
   }
 

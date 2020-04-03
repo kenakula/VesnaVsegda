@@ -1,6 +1,7 @@
 $(document).ready(() => {
   const slideButton = $(".promo__arrow");
   const mouseButton = $(".promo__mouse");
+  const promoButton = $(".promo__link");
   const catalogAnchor = $("#catalog");
 
   
@@ -17,7 +18,12 @@ $(document).ready(() => {
   slideButton.click((evt) => {
     slideToAnchor(evt, catalogAnchor);
   });
+  
   mouseButton.click((evt) => {
+    slideToAnchor(evt, catalogAnchor);
+  });
+
+  promoButton.click((evt) => {
     slideToAnchor(evt, catalogAnchor);
   });
 

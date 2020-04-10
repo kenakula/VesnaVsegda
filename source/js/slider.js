@@ -20,7 +20,9 @@ $(document).ready(function () {
   const onBulletClickChangeActiveBullet = function (event) {
     let currentActiveBullet = bulletsContainer.find(".slider__bullet--active");
     currentActiveBullet.removeClass("slider__bullet--active");
+    currentActiveBullet.attr("aria-current", "false");
     $(event.target).addClass("slider__bullet--active");
+    $(event.target).attr("aria-current", "true");
   };
 
   bullets.click(onBulletClickChangeSlide);

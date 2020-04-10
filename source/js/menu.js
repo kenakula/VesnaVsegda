@@ -40,6 +40,7 @@ $(document).ready(function () {
     menu.slideDown("slow");
     menu.addClass("main-nav__list--active");
     menuToggler.addClass("main-nav__toggler--active");
+    menuToggler.attr("aria-expanded", "true");
     animateTogglerToCenter(togglerTop, togglerBot);
     toggleRotatedClass(togglerTop, togglerBot);
   };
@@ -48,6 +49,7 @@ $(document).ready(function () {
     menu.slideUp("slow");
     menu.removeClass("main-nav__list--active");
     menuToggler.removeClass("main-nav__toggler--active");
+    menuToggler.attr("aria-expanded", "false");
     animateTogglerToInitial(togglerTop, togglerBot);
     toggleRotatedClass(togglerTop, togglerBot);
   };

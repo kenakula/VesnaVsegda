@@ -10,50 +10,57 @@
 }
 
 .socials__item {
-  margin-right: 40px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socials__link {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  justify-content: center;
   background-color: $bg-main;
-  color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $white;
 }
 
 @media (min-width: $tablet) {
   .socials__link {
-    width: 55px;
-    height: 55px;
-  }
-
-  .socials__icon {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 @media (min-width: $desktop) {
-  .socials--header {
-    .socials__list {
-      flex-direction: column;
-      padding: 0;
-      max-width: none;
+  .socials__list {
+    flex-direction: column;
+
+    &--footer {
+      flex-direction: row;
+
+      .socials__item {
+        margin: 0;
+      }
     }
   }
 
   .socials__item {
-    margin-right: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  .socials__link {
-    background-color: transparent;
+  .socials__link:hover {
+    background-color: $white;
+    color: $bg-main;
+  }
+
+  .socials__icon {
+    width: 25px;
+    height: 25px;
   }
 }

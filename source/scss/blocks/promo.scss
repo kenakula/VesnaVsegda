@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding-top: 35%;
+  padding-top: 100px;
   min-height: 466px;
   height: calc(100vh - 65px);
   background-image: url("../img/header-bg-mobile@1x.png");
@@ -19,7 +19,7 @@
 
 .promo__title {
   margin: 0;
-  margin-bottom: 20%;
+  margin-bottom: 50px;
   padding: 0 30px;
   font-family: $font-title;
   font-size: 30px;
@@ -31,7 +31,7 @@
 }
 
 .promo__link {
-  margin: 0 auto 20%;
+  margin: 0 auto 55px;
   border: 1px solid $white;
   background-color: rgba($color: black, $alpha: 0.4);
 }
@@ -152,10 +152,11 @@
   .promo__arrow-label {
     position: absolute;
     display: block;
-    top: -100px;
+    top: -120px;
     left: -73px;
     width: 180px;
     display: block;
+    padding-top: 15px;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.06em;

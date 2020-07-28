@@ -20,14 +20,15 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
+    'source/slick/**',
     'source/*.ico'
   ], {
     base: 'source'
@@ -35,23 +36,23 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('source/img/**/*.{png,jpg,svg}')
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest('source/img'));
 });
 
-gulp.task('webp', function() {
+gulp.task('webp', function () {
   return gulp.src('source/img/**/*{jpg,png}')
-    .pipe(webp({quality: 90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest('source/img'));
 });
 
-gulp.task('sprite', function() {
+gulp.task('sprite', function () {
   return gulp.src('source/img/icon-*.svg')
     .pipe(svgstore({
       inlineSvg: true
@@ -75,7 +76,7 @@ gulp.task('css', function () {
     .pipe(server.stream());
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
   return gulp.src('source/*.html')
     .pipe(posthtml([
       include()
@@ -87,7 +88,7 @@ gulp.task('html', function() {
 gulp.task('uglify', function () {
   return gulp.src('source/js/*.js')
     .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -106,7 +107,7 @@ gulp.task('server', function () {
   gulp.watch('source/js/*.js', gulp.series('uglify', 'refresh'));
 });
 
-gulp.task('refresh', function(done) {
+gulp.task('refresh', function (done) {
   server.reload();
   done();
 });

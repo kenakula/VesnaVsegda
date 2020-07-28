@@ -18,13 +18,17 @@ $(document).ready(function () {
 
   const onEscCloseModal = function (event) {
     if (event.key === ESC_KEY) {
-      console.log('hello')
       closeModal();
       $(document).off("keydown", onEscCloseModal);
     }
   };
 
+  const onOverlayClickCloseModal = function (evt) {
+    evt.target.classList.contains('modal') ? closeModal() : evt.preventDefault();
+  };
+
   orderButton.on("click", showModal);
   closeButton.on("click", closeModal);
+  modal.on("click", onOverlayClickCloseModal);
 
 })

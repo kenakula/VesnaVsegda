@@ -1,40 +1,32 @@
 $(document).ready(function () {
-  const sliderButton = $(".thumbnails__button");
-  const sliderList = $(".thumbnails__list");
 
-  const moveSliderForvard = () => {
-    sliderList.animate({
-      left: "-552px",
-    }, "slow");
-  };
+  const nextButton = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--next">Next</button>';
+  const previousButton = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--previous">Previous</button>';
 
-  const moveSliderBack = () => {
-    sliderList.animate({
-      left: "0",
-    }, "slow");
-  };
+  $('.thumbnails__list').slick({
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    infinite: false,
+    dotsClass: 'thumbnails__dots',
+    customPaging: function () {
+      return '<span class="thembnails__bullet"></span>';
+    },
+    prevArrow: previousButton,
+    nextArrow: nextButton,
+    responsive: [
+      {
+        breakpoint: 1365,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+          arrows: false,
+        }
+      }
+    ]
+  })
 
-  const changeButtonClass = function () {
-    sliderButton.toggleClass("thumbnails__button--used");
-  };
+  $('a[data-rel^=lightcase]').lightcase();
 
-  const changeListClass = function () {
-    sliderList.toggleClass("thumbnails__list--slided");
-  };
-
-  const onSliderButtonSlidesChange = function () {
-
-    if (sliderList.hasClass("thumbnails__list--slided")) {
-      moveSliderBack();
-      changeButtonClass();
-      changeListClass();
-      return;
-    }
-
-    moveSliderForvard();
-    changeButtonClass();
-    changeListClass();
-  }
-
-  sliderButton.click(onSliderButtonSlidesChange);
 })

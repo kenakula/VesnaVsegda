@@ -106,12 +106,13 @@
   display: none;
 }
 
-.slick-active .slider__bullet {
+.slick-active .slider__bullet,
+.slick-active .thembnails__bullet {
   background-color: $white;
 }
 
 @media (min-width: $tablet) {
-  .slick-slide {
+  .slider .slick-slide {
     padding: 20px;
   }
 }

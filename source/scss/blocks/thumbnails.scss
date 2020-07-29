@@ -4,61 +4,56 @@
 
 .thumbnails__list {
   @include list-reset;
+}
+
+.thumbnails__dots {
+  @include list-reset;
 
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  cursor: pointer;
+
+  li {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.thembnails__bullet {
+  @include button-reset;
+
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba($color: $black, $alpha: 0.4);
 }
 
 .thumbnails__item {
-  flex-shrink: 0;
-  margin-right: 15px;
-
-  &--mobilehidden {
-    display: none;
+  img {
+    margin-left: calc(50% - 37.5px);
   }
-
-  &--desktop {
-    display: none;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.thumbnails__button {
-  display: none;
 }
 
 @media (min-width: $tablet) {
-  .thumbnails__item {
-    &--mobilehidden {
-      display: block;
-    }
-  }
-
-  .thumbnails__img {
+  .thumbnails__item img {
+    margin-left: calc(50% - 72.5px);
     width: 145px;
     height: 145px;
   }
 }
 
 @media (min-width: $desktop) {
-  .thumbnails {
+  .thumbnails__list {
     position: relative;
-  }
-
-  .thumbnails__inner{
-    position: relative;
-    width: 537px;
-    height: 123px;
-    overflow: hidden;
   }
 
   .thumbnails__button {
     position: absolute;
     display: block;
-    left: 515px;
     top: 38.5px;
     width: 46px;
     height: 46px;
@@ -68,14 +63,12 @@
     background-image: url("../img/icon-arrow-right.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    font-size: 0;
     transition: all 0.5s ease;
     cursor: pointer;
     outline: none;
+    z-index: 100;
     transition: all 0.3s ease;
-
-    &--used {
-      transform: rotate(180deg);
-    }
 
     &:focus {
       box-shadow: 0 0 5px $white;
@@ -84,22 +77,25 @@
     &:hover {
       background-color: rgba($color: $black, $alpha: 0.8);
     }
-  }
 
-  .thumbnails__list {
-    position: absolute;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
+    &--next {
+      right: 6px;
+    }
 
-  .thumbnails__item {
-    &--desktop {
-      display: block;
+    &--previous {
+      left: -30px;
+      transform: rotate(180deg);
     }
   }
 
-  .thumbnails__img {
-    width: 123px;
-    height: 123px;
+  .thumbnails__item {
+
+    img {
+      margin: 0;
+      width: 123px;
+      height: 123px;
+    }
   }
+
+
 }

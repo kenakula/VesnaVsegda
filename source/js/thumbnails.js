@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  const NEXT_BUTTON = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--next">Next</button>';
-  const PREVIOUS_BUTTON = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--previous">Previous</button>';
+  const NEXT_BUTTON = '<button type="button" class="slick-prev thumbnails__button thumbnails__button--next">Next</button>';
+  const PREVIOUS_BUTTON = '<button type="button" class="slick-prev thumbnails__button thumbnails__button--previous">Previous</button>';
 
   $('.thumbnails__list').slick({
     speed: 600,

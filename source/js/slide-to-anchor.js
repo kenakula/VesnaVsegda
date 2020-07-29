@@ -1,10 +1,10 @@
 $(document).ready(() => {
   const slideButton = $(".promo__arrow");
   const mouseButton = $(".promo__mouse");
-  const promoButton = $(".promo__link");
+  const promoButton = $(".promo__inner > .button");
   const catalogAnchor = $("#catalog");
 
-  
+
   const slideToAnchor = function (evt, anchor) {
     let anchorPosition = anchor.offset().top;
     evt.preventDefault();
@@ -18,7 +18,7 @@ $(document).ready(() => {
   slideButton.click(function (evt) {
     slideToAnchor(evt, catalogAnchor);
   });
-  
+
   mouseButton.click(function (evt) {
     slideToAnchor(evt, catalogAnchor);
   });

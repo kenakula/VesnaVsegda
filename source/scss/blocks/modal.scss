@@ -31,30 +31,30 @@
   padding: 60px 20px 50px;
   min-height: 400px;
   background-color: $bg-main;
-}
 
-.modal__title {
-  margin: 0;
-  margin-bottom: 35px;
-  padding: 0 10px;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 22px;
-  text-align: center;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  h2 {
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0 10px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
 }
 
 @media (min-width: $tablet) {
   .modal__inner {
     padding: 60px 45px 50px;
     width: 60%;
-  }
 
-  .modal__title {
-    padding: 0 70px;
-    font-size: 30px;
-    line-height: 33px;
+    h2 {
+      padding: 0 70px;
+      font-size: 30px;
+      line-height: 33px;
+    }
   }
 }
 
@@ -63,6 +63,12 @@
     display: flex;
     padding: 0;
     width: 672px;
+
+    h2 {
+      padding: 0 20px;
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   .modal__wrapper {
@@ -73,11 +79,5 @@
     &--form {
       padding: 60px 30px;
     }
-  }
-
-  .modal__title {
-    padding: 0 20px;
-    font-size: 20px;
-    line-height: 22px;
   }
 }

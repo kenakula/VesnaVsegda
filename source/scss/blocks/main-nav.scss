@@ -58,10 +58,6 @@
   }
 }
 
-.main-nav__toggler-label {
-  display: none;
-}
-
 .main-nav__list {
   @include list-reset;
 
@@ -77,26 +73,26 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
 
-.main-nav__link {
-  display: block;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 0.09em;
-  color: $white-faded;
-  text-decoration: none;
-  text-transform: uppercase;
-  outline: none;
+  a {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    color: $white-faded;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
 
-  &--active {
-    font-size: 25px;
-    line-height: 28px;
-    color: $white;
+    &:focus,
+    &:hover {
+      color: $white;
+    }
   }
 
-  &:focus,
-  &:hover {
+  .main-nav__current-link {
+    font-size: 25px;
+    line-height: 28px;
     color: $white;
   }
 }
@@ -114,13 +110,13 @@
   .main-nav__item {
     margin-bottom: 5%;
     padding: 0 165px;
-  }
 
-  .main-nav__link {
-    font-size: 30px;
-    line-height: 33px;
+    a {
+      font-size: 30px;
+      line-height: 33px;
+    }
 
-    &--active {
+    .main-nav__current-link {
       font-size: 45px;
       line-height: 50px;
     }
@@ -151,13 +147,13 @@
   
   .main-nav__item {
     padding: 0 30%;
-  }
 
-  .main-nav__link {
-    font-size: 35px;
-    line-height: 39px;
+    a {
+      font-size: 35px;
+      line-height: 39px;
+    }
 
-    &--active {
+    .main-nav__current-link {
       font-size: 45px;
       line-height: 50px;
     }

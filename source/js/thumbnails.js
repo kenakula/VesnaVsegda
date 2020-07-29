@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  const nextButton = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--next">Next</button>';
-  const previousButton = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--previous">Previous</button>';
+  const NEXT_BUTTON = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--next">Next</button>';
+  const PREVIOUS_BUTTON = '<button type="button" class="slick-prev button thumbnails__button thumbnails__button--previous">Previous</button>';
 
   $('.thumbnails__list').slick({
     speed: 600,
@@ -12,8 +12,8 @@ $(document).ready(function () {
     customPaging: function () {
       return '<span class="thembnails__bullet"></span>';
     },
-    prevArrow: previousButton,
-    nextArrow: nextButton,
+    prevArrow: PREVIOUS_BUTTON,
+    nextArrow: NEXT_BUTTON,
     responsive: [
       {
         breakpoint: 1365,

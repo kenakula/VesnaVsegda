@@ -13,19 +13,19 @@
 .page-footer__nav-item {
   padding: 5px 30px;
   text-align: center;
-}
 
-.page-footer__nav-link {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: $white-faded;
-  text-decoration: none;
-  outline: none;
-
-  &:focus,
-  &:hover {
-    color: $white;
+  a {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $white-faded;
+    text-decoration: none;
+    outline: none;
+  
+    &:focus,
+    &:hover {
+      color: $white;
+    }
   }
 }
 
@@ -43,7 +43,7 @@
 }
 
 @media (min-width: $tablet) {
-  .page-footer__nav-link {
+  .page-footer__nav-item a {
     font-size: 20px;
     line-height: 22px;
     transition: color 0.3s ease;

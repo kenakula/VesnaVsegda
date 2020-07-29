@@ -3,37 +3,42 @@
   padding-top: 100px;
   min-height: 466px;
   height: calc(100vh - 65px);
-  background-image: url("../img/header-bg-mobile@1x.png");
+  background-image: url("../img/header-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   @media (min-resolution: $retina) {
-    background-image: url("../img/header-bg-mobile@2x.png");
+    background-image: url("../img/header-bg-mobile@2x.jpg");
   }
 
   @media (min-resolution: $retina-plus) {
-    background-image: url("../img/header-bg-mobile@3x.png");
+    background-image: url("../img/header-bg-mobile@3x.jpg");
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    font-family: $font-title;
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: normal;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    text-align: center;
   }
 }
 
-.promo__title {
-  margin: 0;
-  margin-bottom: 50px;
-  padding: 0 30px;
-  font-family: $font-title;
-  font-size: 30px;
-  line-height: 42px;
-  font-weight: normal;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.promo__link {
+.promo__inner > .button {
   margin: 0 auto 55px;
   border: 1px solid $white;
   background-color: rgba($color: black, $alpha: 0.4);
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 .promo__socials {
@@ -41,6 +46,8 @@
 }
 
 .promo__arrow {
+  @include button-reset;
+
   position: absolute;
   left: 50%;
   bottom: 10%;
@@ -53,6 +60,8 @@
   height: 30px;
   font-size: 0;
   text-align: center;
+  cursor: pointer;
+  outline: none;
 }
 
 .promo__mouse {
@@ -65,21 +74,21 @@
     padding-top: 30%;
     min-height: 880px;
     height: 100vh;
-    background-image: url("../img/header-bg-tablet@1x.png");
+    background-image: url("../img/header-bg-tablet@1x.jpg");
 
     @media (min-resolution: $retina) {
-      background-image: url("../img/header-bg-tablet@2x.png");
+      background-image: url("../img/header-bg-tablet@2x.jpg");
     }
 
     @media (min-resolution: $retina-plus) {
-      background-image: url("../img/header-bg-tablet@3x.png");
+      background-image: url("../img/header-bg-tablet@3x.jpg");
     }
-  }
 
-  .promo__title {
-    margin-bottom: 15%;
-    font-size: 70px;
-    line-height: 77px;
+    h1 {
+      margin-bottom: 15%;
+      font-size: 70px;
+      line-height: 77px;
+    }
   }
 
   .promo__link {
@@ -106,27 +115,27 @@
     flex-direction: column;
     margin-top: -160px;
     padding-top: 12%;
-    background-image: url("../img/header-bg-desktop@1x.png");
+    background-image: url("../img/header-bg-desktop@1x.jpg");
 
     @media (min-resolution: $retina) {
-      background-image: url("../img/header-bg-desktop@2x.png");
+      background-image: url("../img/header-bg-desktop@2x.jpg");
     }
 
     @media (min-resolution: $retina-plus) {
-      background-image: url("../img/header-bg-desktop@3x.png");
+      background-image: url("../img/header-bg-desktop@3x.jpg");
+    }
+
+    h1 {
+      margin-bottom: 3%;
+      padding: 0 15%;
+      font-size: 120px;
+      line-height: 132px;
     }
   }
 
   .promo__inner {
     display: flex;
     flex-direction: column;
-  }
-
-  .promo__title {
-    margin-bottom: 3%;
-    padding: 0 15%;
-    font-size: 120px;
-    line-height: 132px;
   }
 
   .promo__link {
@@ -147,20 +156,20 @@
     left: 95%;
     bottom: 13%;
     color: $white;
-  }
 
-  .promo__arrow-label {
-    position: absolute;
-    display: block;
-    top: -120px;
-    left: -73px;
-    width: 180px;
-    display: block;
-    padding-top: 15px;
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 0.06em;
-    transform: rotate(90deg);
+    span {
+      position: absolute;
+      display: block;
+      top: -120px;
+      left: -73px;
+      width: 180px;
+      display: block;
+      padding-top: 15px;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.06em;
+      transform: rotate(90deg);
+    }
   }
 
   .promo__mouse {

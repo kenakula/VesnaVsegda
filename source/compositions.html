@@ -28,26 +28,25 @@
     <nav class="page-header__main-nav main-nav">
       <button class="main-nav__toggler" aria-haspopup="true" aria-expanded="false" type="button">
         Иконка меню
-        <span class="main-nav__toggler-label">Меню</span>
         <span class="main-nav__toggler--top"></span>
         <span class="main-nav__toggler--bot"></span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Свадебная флористика</a>
+          <a href="index.html">Свадебная флористика</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="events.html">Букеты на любые
+          <a href="events.html">Букеты на любые
             мероприятия</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="bouquetes.html">Букеты невесты</a>
+          <a href="bouquetes.html">Букеты невесты</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" aria-current="true">Композиции</a>
+          <a class="main-nav__current-link" aria-current="true">Композиции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="decoration.html">Оформление
+          <a href="decoration.html">Оформление
             мероприятий</a>
         </li>
       </ul>
@@ -69,19 +68,19 @@
           <!-- В макете не было изображений для планшетной версии ¯\_(ツ)_/¯ -->
           <source media="(min-width: 768px)"
             srcset="img/event-img-tablet@1x.jpg 1x, img/event-img-tablet@2x.jpg 2x, img/event-img-tablet@3x.jpg 3x">
-          <img class="offer__img" src="img/box-img-mobile@1x.jpg"
-            srcset="img/box-img-mobile@2x.jpg 2x, img/box-img-mobile@3x.jpg 3x" alt="фотография композиции в корзинке">
+          <img src="img/box-img-mobile@1x.jpg" srcset="img/box-img-mobile@2x.jpg 2x, img/box-img-mobile@3x.jpg 3x"
+            alt="фотография композиции в корзинке">
         </picture>
       </div>
       <div class="offer__inner wrapper">
-        <h1 class="offer__title">Композиции и шляпные коробки</h1>
-        <p class="offer__text">
+        <h1>Композиции и шляпные коробки</h1>
+        <p>
           Композиции могут собираться в любой таре: корзинке, шляпной коробке, вазочке или декоративных ящиках. Их нет
           необходимости ставить в вазу, как букеты, потому что цветы питаются при помощи специальной флористической
           губки под названием оазис.
           Композиции очень удобные для подарка, или оформления мероприятия.
         </p>
-        <button class="offer__button button order-button" type="button">Заказать</button>
+        <button class="button order-button" type="button">Заказать</button>
         <div class="offer__thumbnails thumbnails">
           <div class="thumbnails__inner">
             <ul class="thumbnails__list">
@@ -199,19 +198,19 @@
       <div class="page-footer__nav">
         <ul class="page-footer__nav-list">
           <li class="page-footer__nav-item">
-            <a class="page-footer__nav-link" href="index.html">Cвадебная флористика</a>
+            <a href="index.html">Cвадебная флористика</a>
           </li>
           <li class="page-footer__nav-item">
-            <a class="page-footer__nav-link" href="events.html">Букеты на любые мероприятия</a>
+            <a href="events.html">Букеты на любые мероприятия</a>
           </li>
           <li class="page-footer__nav-item">
-            <a class="page-footer__nav-link" href="bouquetes.html">Букеты невесты</a>
+            <a href="bouquetes.html">Букеты невесты</a>
           </li>
           <li class="page-footer__nav-item">
-            <a class="page-footer__nav-link" href="compositions.html" aria-current="true">Композиции</a>
+            <a href="compositions.html" aria-current="true">Композиции</a>
           </li>
           <li class="page-footer__nav-item">
-            <a class="page-footer__nav-link" href="decoration.html">Оформление мероприятий</a>
+            <a href="decoration.html">Оформление мероприятий</a>
           </li>
         </ul>
       </div>
@@ -253,7 +252,7 @@
     <div class="modal__inner wrapper">
       <button class="modal__close">
         Закрыть окно
-        <svg class="modal__cross-icon" width="22" height="22">
+        <svg width="22" height="22">
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
@@ -264,17 +263,17 @@
 
           <source media="(min-width: 1366px)" type="image/webp"
             srcset="img/callback-img-desktop@1x.jpg 1x, img/callback-img-desktop@2x.jpg 2x, img/callback-img-desktop@3x.jpg 3x">
-          <img class="modal__img" src="" srcset="" loading="lazy" width="335" height="444" alt="изображение цветочка">
+          <img src="" srcset="" loading="lazy" width="335" height="444" alt="изображение цветочка">
         </picture>
       </div>
       <div class="modal__wraper modal__wrapper--form">
-        <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
-        <form class="modal__form form" action="#" method="POST">
-          <fieldset class="form__field">
-            <input class="form__input" type="text" name="name" placeholder="Имя" required>
-            <input class="form__input" type="text" name="surname" placeholder="Фамилия" required>
+        <h2>Оставьте свой номер и мы вам перезвоним!</h2>
+        <form class="form" action="#" method="POST">
+          <fieldset>
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="text" name="surname" placeholder="Фамилия" required>
           </fieldset>
-          <button class="form__button button" type="submit">Позвоните мне</button>
+          <button class="button" type="submit">Позвоните мне</button>
         </form>
       </div>
     </div>

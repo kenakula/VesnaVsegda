@@ -10,6 +10,7 @@
   background-image: url("../img/discount-img-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: 288px;
 
   @media (min-resolution: $retina) {
     background-image: url("../img/discount-img-mobile@2x.jpg");
@@ -67,6 +68,7 @@
   .discount__wrapper {
     padding-top: 325px;
     background-image: url("../img/discount-img-tablet@1x.jpg");
+    background-size: 453px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/discount-img-tablet@2x.jpg");
@@ -112,6 +114,7 @@
     flex-direction: row;
     background-image: url("../img/discount-img-desktop@1x.jpg");
     background-position: right center;
+    background-size: 700px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/discount-img-desktop@2x.jpg");

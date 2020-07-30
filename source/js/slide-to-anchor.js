@@ -1,15 +1,17 @@
+'use strict';
+
 $(document).ready(() => {
-  const slideButton = $(".promo__arrow");
-  const mouseButton = $(".promo__mouse");
-  const promoButton = $(".promo__inner > .button");
-  const catalogAnchor = $("#catalog");
+  const slideButton = $('.promo__arrow');
+  const mouseButton = $('.promo__mouse');
+  const promoButton = $('.promo__inner > .button');
+  const catalogAnchor = $('#catalog');
 
 
   const slideToAnchor = function (evt, anchor) {
     let anchorPosition = anchor.offset().top;
     evt.preventDefault();
 
-    $("html, body").animate({
+    $('html, body').animate({
       scrollTop: anchorPosition,
     }, 1000);
 
@@ -27,4 +29,4 @@ $(document).ready(() => {
     slideToAnchor(evt, catalogAnchor);
   });
 
-})
+});

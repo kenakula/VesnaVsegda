@@ -15,7 +15,7 @@
   display: block;
   z-index: 100;
   outline: none;
-  
+
   &:focus::before {
     content: "";
     position: absolute;

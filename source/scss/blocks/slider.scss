@@ -133,10 +133,8 @@
     box-shadow: transparent, transparent;
     transition: all 0.3s ease;
 
-
     &:hover {
-      box-shadow: 0 0 0 10px $bg-main,
-                  0 0 0 11px $white-faded;
+      box-shadow: 0 0 0 10px $bg-main, 0 0 0 11px $white-faded;
     }
   }
 }

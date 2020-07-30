@@ -1,7 +1,9 @@
+'use strict';
+
 $(document).ready(function () {
 
   $('.slider__list').slick({
-    speed: 600,
+    speed: 1000,
     arrows: false,
     dots: true,
     mobileFirst: true,

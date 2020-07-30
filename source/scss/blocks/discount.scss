@@ -85,9 +85,9 @@
     h2 {
       padding: 0 70px;
       text-align: center;
-  
+
       &::after {
-        left: calc(50% - 43px)
+        left: calc(50% - 43px);
       }
     }
 
@@ -136,7 +136,7 @@
       font-size: 30px;
       line-height: 51px;
       text-align: left;
-  
+
       &::after {
         left: 0;
       }

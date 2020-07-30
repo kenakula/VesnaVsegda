@@ -1,5 +1,6 @@
 .thumbnails {
   position: relative;
+  max-width: 90%;
 }
 
 .thumbnails__list {
@@ -64,7 +65,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     font-size: 0;
-    transition: all 0.5s ease;
     cursor: pointer;
     outline: none;
     z-index: 100;
@@ -79,7 +79,7 @@
     }
 
     &--next {
-      right: 6px;
+      right: -3.5%;
     }
 
     &--previous {
@@ -89,13 +89,10 @@
   }
 
   .thumbnails__item {
-
     img {
       margin: 0;
       width: 123px;
       height: 123px;
     }
   }
-
-
 }

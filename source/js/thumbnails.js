@@ -1,10 +1,12 @@
+'use strict';
+
 $(document).ready(function () {
 
   const NEXT_BUTTON = '<button type="button" class="slick-prev thumbnails__button thumbnails__button--next">Next</button>';
   const PREVIOUS_BUTTON = '<button type="button" class="slick-prev thumbnails__button thumbnails__button--previous">Previous</button>';
 
   $('.thumbnails__list').slick({
-    speed: 600,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
     infinite: false,
@@ -25,8 +27,8 @@ $(document).ready(function () {
         }
       }
     ]
-  })
+  });
 
   $('a[data-rel^=lightcase]').lightcase();
 
-})
+});

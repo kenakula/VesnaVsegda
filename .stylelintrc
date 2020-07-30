@@ -1,15 +1,8 @@
 {
-  "extends": "stylelint-config-sass-guidelines",
+  "extends": "stylelint-config-htmlacademy",
   "rules": {
-    "indentation": 2,
-    "no-duplicate-selectors": true,
-    "color-hex-case": "lower",
-    "color-hex-length": "long",
-    "color-named": "never",
-    "selector-combinator-space-after": "always",
-    "number-leading-zero": "always",
-    "function-url-quotes": "always",
-    "font-family-name-quotes": "always-unless-keyword",
-    "selector-pseudo-element-colon-notation": "double"
+    'at-rule-no-unknown': null,
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}]
   }
 }

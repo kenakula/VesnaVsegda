@@ -39,7 +39,7 @@ $(document).ready(function () {
   };
 
   const showMenu = function () {
-    menu.slideDown('slow');
+    menu.fadeIn('slow');
     menu.addClass('main-nav__list--active');
     menuToggler.addClass('main-nav__toggler--active');
     menuToggler.attr('aria-expanded', 'true');
@@ -48,7 +48,7 @@ $(document).ready(function () {
   };
 
   const hideMenu = function () {
-    menu.slideUp('slow');
+    menu.fadeOut('slow');
     menu.removeClass('main-nav__list--active');
     menuToggler.removeClass('main-nav__toggler--active');
     menuToggler.attr('aria-expanded', 'false');

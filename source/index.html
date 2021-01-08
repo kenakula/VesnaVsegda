@@ -93,12 +93,12 @@
             </li>
           </ul>
         </div>
-        <button class="promo__arrow" tabindex="-1" href="#catalog">
+        <a class="promo__arrow" tabindex="-1" href="#catalog">
           <span>Прокрутить вниз</span>
           <svg width="14" height="21" aria-hidden="true">
             <use xlink:href="#icon-arrow-down"></use>
           </svg>
-        </button>
+        </a>
       </div>
       <button class="promo__mouse" type="button" aria-hidden="true">
         <svg width="37" height="56">
@@ -108,10 +108,10 @@
     </section>
     <section class="catalog" id="catalog">
       <div class="catalog__wrapper wrapper">
-        <h2 id="slider-desc">Каталог услуг</h2>
-        <div class="catalog__slider slider" aria-describedby="#slider-desc">
+        <h2>Каталог услуг</h2>
+        <div class="catalog__slider slider">
           <div class="slider__inner">
-            <ul class="slider__list">
+            <ul class="slider__list" role="tablist">
               <li class="slider__item" role="tab">
                 <a href="events.html">
                   <picture>
@@ -123,7 +123,7 @@
                       width="290" height="395" alt="букет невесты" data-lazy="img/slider-img-1-mobile@1x.jpg">
                   </picture>
                   <p>Букет невесты и свадебное оформление</p>
-                  <a class="button">Смотреть работы</a>
+                  <span class="button">Смотреть работы</span>
                 </a>
               </li>
 
@@ -138,7 +138,7 @@
                       width="290" height="395" alt="букеты на торжества" data-lazy="img/slider-img-1-mobile@1x.jpg">
                   </picture>
                   <p>Букеты на торжества</p>
-                  <a class="button">Смотреть работы</a>
+                  <span class="button">Смотреть работы</span>
                 </a>
               </li>
 
@@ -153,7 +153,7 @@
                       width="290" height="395" alt="композиции" data-lazy="img/slider-img-1-mobile@1x.jpg">
                   </picture>
                   <p>Композиции</p>
-                  <a class="button">Смотреть работы</a>
+                  <span class="button">Смотреть работы</span>
                 </a>
               </li>
 
@@ -168,7 +168,7 @@
                       width="290" height="395" alt="оформление мероприятий" data-lazy="img/slider-img-1-mobile@1x.jpg">
                   </picture>
                   <p>Оформление мероприятий</p>
-                  <a class="button">Смотреть работы</a>
+                  <span class="button">Смотреть работы</span>
                 </a>
               </li>
             </ul>
@@ -185,7 +185,7 @@
               При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%
             </li>
           </ul>
-          <button class="button order-button" href="#">Заказать оформление</button>
+          <a class="button order-button" href="#">Заказать оформление</a>
         </div>
       </div>
     </section>
@@ -245,7 +245,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal modal--callback modal--hidden" aria-role="modal">
+  <div class="modal modal--callback modal--hidden">
     <div class="modal__inner wrapper">
       <button class="modal__close">
         Закрыть окно
@@ -260,7 +260,7 @@
 
           <source media="(min-width: 1366px)"
             srcset="img/callback-img-desktop@1x.jpg 1x, img/callback-img-desktop@2x.jpg 2x, img/callback-img-desktop@3x.jpg 3x">
-          <img src="" srcset="" width="335" height="444" loading="lazy" alt="изображение цветочка">
+          <img src="#" srcset="#" width="335" height="444" loading="lazy" alt="изображение цветочка">
         </picture>
       </div>
       <div class="modal__wraper modal__wrapper--form">
